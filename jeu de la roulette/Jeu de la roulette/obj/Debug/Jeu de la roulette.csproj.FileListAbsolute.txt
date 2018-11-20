@@ -35,3 +35,11 @@ C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\
 C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.CoreCompileInputs.cache
 C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.exe
 C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.pdb
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.csprojAssemblyReference.cache
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.frm_regles.resources
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Accueil.resources
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Properties.Resources.resources
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.GenerateResource.cache
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.CoreCompileInputs.cache
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.exe
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.pdb
