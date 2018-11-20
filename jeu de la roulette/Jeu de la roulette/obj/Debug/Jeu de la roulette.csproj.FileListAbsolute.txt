@@ -1,0 +1,37 @@
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe.config
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.frm_regles.resources
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Accueil.resources
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Properties.Resources.resources
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.GenerateResource.Cache
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\bin\Debug\Jeu de la roulette.pdb
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.exe
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.pdb
+C:\Users\NolseFTW\Desktop\Jeu de la roulette\Jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.csprojResolveAssemblyReference.cache
+C:\Users\Niels.GERMANN\Downloads\Jeu de la roulette 0.3 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe.config
+C:\Users\Niels.GERMANN\Downloads\Jeu de la roulette 0.3 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe
+C:\Users\Niels.GERMANN\Downloads\Jeu de la roulette 0.3 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\bin\Debug\Jeu de la roulette.pdb
+C:\Users\Niels.GERMANN\Downloads\Jeu de la roulette 0.3 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.frm_regles.resources
+C:\Users\Niels.GERMANN\Downloads\Jeu de la roulette 0.3 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Accueil.resources
+C:\Users\Niels.GERMANN\Downloads\Jeu de la roulette 0.3 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Properties.Resources.resources
+C:\Users\Niels.GERMANN\Downloads\Jeu de la roulette 0.3 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.GenerateResource.Cache
+C:\Users\Niels.GERMANN\Downloads\Jeu de la roulette 0.3 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.exe
+C:\Users\Niels.GERMANN\Downloads\Jeu de la roulette 0.3 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.pdb
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe.config
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.exe
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.pdb
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\bin\Debug\Jeu de la roulette.pdb
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.csprojResolveAssemblyReference.cache
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.frm_regles.resources
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Accueil.resources
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Properties.Resources.resources
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.4 Niels\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.GenerateResource.Cache
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.csprojAssemblyReference.cache
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.frm_regles.resources
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Accueil.resources
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.Properties.Resources.resources
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.GenerateResource.cache
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.CoreCompileInputs.cache
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.exe
+C:\Users\Lavdim.SADIKAJ\Desktop\Jeu de la roulette 0.3 Niels\Jeu de la roulette\obj\Debug\Jeu de la roulette.pdb
