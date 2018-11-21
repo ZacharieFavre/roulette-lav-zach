@@ -43,3 +43,6 @@ C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la r
 C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.CoreCompileInputs.cache
 C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.exe
 C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.pdb
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe.config
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\Jeu de la roulette.pdb
