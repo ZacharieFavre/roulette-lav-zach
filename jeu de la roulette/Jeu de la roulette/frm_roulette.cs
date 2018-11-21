@@ -214,7 +214,7 @@ namespace Jeu_de_la_roulette
 
             }
             txt_sommetotal.Text = sommetotale.ToString();
-            pic_randomchoisi.ImageLocation = "fichiers\\numero roulette\\" + numerotirer + ".png";
+            //pic_randomchoisi.ImageLocation = "fichiers\\numero roulette\\" + numerotirer + ".png";
             	
             for (int i=0;i<37;i++)
             {
