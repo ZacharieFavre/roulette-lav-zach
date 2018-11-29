@@ -64,16 +64,17 @@ namespace Jeu_de_la_roulette
         {
             int mise;
             int numero;
+            if (txt_mise.Text!="") {
+                mise = int.Parse(txt_mise.Text);
+                numero = int.Parse(txt_numeromise.Text);
 
-            mise = int.Parse(txt_mise.Text);
-            numero = int.Parse(txt_numeromise.Text);
-
-            if (sommetotale >= mise)
-            {
-                lstnumero[numero] += mise;
-                sommetotale -= mise;
+                if (sommetotale >= mise)
+                {
+                    lstnumero[numero] += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
         }
 
         private void cmd_validersomme_Click(object sender, EventArgs e)
