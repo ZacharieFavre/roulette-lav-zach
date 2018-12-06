@@ -78,7 +78,25 @@
             this.lbl_mise36 = new System.Windows.Forms.Label();
             this.lbl_mise28 = new System.Windows.Forms.Label();
             this.cmd_retirer = new System.Windows.Forms.Button();
+            this.lbl_paire = new System.Windows.Forms.Label();
+            this.lbl_impaire = new System.Windows.Forms.Label();
+            this.cmd_paire = new System.Windows.Forms.Button();
+            this.cmd_impair = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.cmd_Noir = new System.Windows.Forms.Button();
+            this.cmd_rouge = new System.Windows.Forms.Button();
+            this.lbl_Noir = new System.Windows.Forms.Label();
+            this.lbl_Rouge = new System.Windows.Forms.Label();
+            this.cmd_LigneHaut = new System.Windows.Forms.Button();
+            this.cmd_LigneMil = new System.Windows.Forms.Button();
+            this.cmd_LigneBas = new System.Windows.Forms.Button();
+            this.lbl_LigneHaut = new System.Windows.Forms.Label();
+            this.lbl_LigneMil = new System.Windows.Forms.Label();
+            this.lbl_LigneBas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_mise
@@ -151,7 +169,7 @@
             // 
             // cmd_tournerroulette
             // 
-            this.cmd_tournerroulette.Location = new System.Drawing.Point(722, 525);
+            this.cmd_tournerroulette.Location = new System.Drawing.Point(942, 534);
             this.cmd_tournerroulette.Name = "cmd_tournerroulette";
             this.cmd_tournerroulette.Size = new System.Drawing.Size(109, 23);
             this.cmd_tournerroulette.TabIndex = 10;
@@ -529,13 +547,184 @@
             this.cmd_retirer.UseVisualStyleBackColor = true;
             this.cmd_retirer.Click += new System.EventHandler(this.cmd_retirer_Click);
             // 
+            // lbl_paire
+            // 
+            this.lbl_paire.BackColor = System.Drawing.Color.White;
+            this.lbl_paire.Location = new System.Drawing.Point(70, 725);
+            this.lbl_paire.Name = "lbl_paire";
+            this.lbl_paire.Size = new System.Drawing.Size(46, 13);
+            this.lbl_paire.TabIndex = 53;
+            this.lbl_paire.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_impaire
+            // 
+            this.lbl_impaire.BackColor = System.Drawing.Color.White;
+            this.lbl_impaire.Location = new System.Drawing.Point(523, 725);
+            this.lbl_impaire.Name = "lbl_impaire";
+            this.lbl_impaire.Size = new System.Drawing.Size(46, 13);
+            this.lbl_impaire.TabIndex = 54;
+            this.lbl_impaire.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmd_paire
+            // 
+            this.cmd_paire.Location = new System.Drawing.Point(58, 686);
+            this.cmd_paire.Name = "cmd_paire";
+            this.cmd_paire.Size = new System.Drawing.Size(75, 23);
+            this.cmd_paire.TabIndex = 55;
+            this.cmd_paire.Text = "Pair";
+            this.cmd_paire.UseVisualStyleBackColor = true;
+            this.cmd_paire.Click += new System.EventHandler(this.cmd_paire_Click);
+            // 
+            // cmd_impair
+            // 
+            this.cmd_impair.Location = new System.Drawing.Point(516, 686);
+            this.cmd_impair.Name = "cmd_impair";
+            this.cmd_impair.Size = new System.Drawing.Size(75, 23);
+            this.cmd_impair.TabIndex = 56;
+            this.cmd_impair.Text = "Impair";
+            this.cmd_impair.UseVisualStyleBackColor = true;
+            this.cmd_impair.Click += new System.EventHandler(this.cmd_impair_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 57;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Location = new System.Drawing.Point(791, 165);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(141, 153);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 61;
+            this.pictureBox5.TabStop = false;
+            // 
+            // cmd_Noir
+            // 
+            this.cmd_Noir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cmd_Noir.ForeColor = System.Drawing.Color.White;
+            this.cmd_Noir.Location = new System.Drawing.Point(204, 686);
+            this.cmd_Noir.Name = "cmd_Noir";
+            this.cmd_Noir.Size = new System.Drawing.Size(75, 23);
+            this.cmd_Noir.TabIndex = 62;
+            this.cmd_Noir.Text = "Noir";
+            this.cmd_Noir.UseVisualStyleBackColor = false;
+            this.cmd_Noir.Click += new System.EventHandler(this.cmd_Noir_Click);
+            // 
+            // cmd_rouge
+            // 
+            this.cmd_rouge.BackColor = System.Drawing.Color.Red;
+            this.cmd_rouge.ForeColor = System.Drawing.Color.White;
+            this.cmd_rouge.Location = new System.Drawing.Point(365, 686);
+            this.cmd_rouge.Name = "cmd_rouge";
+            this.cmd_rouge.Size = new System.Drawing.Size(75, 23);
+            this.cmd_rouge.TabIndex = 63;
+            this.cmd_rouge.Text = "Rouge";
+            this.cmd_rouge.UseVisualStyleBackColor = false;
+            this.cmd_rouge.Click += new System.EventHandler(this.cmd_rouge_Click);
+            // 
+            // lbl_Noir
+            // 
+            this.lbl_Noir.BackColor = System.Drawing.Color.White;
+            this.lbl_Noir.Location = new System.Drawing.Point(209, 725);
+            this.lbl_Noir.Name = "lbl_Noir";
+            this.lbl_Noir.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Noir.TabIndex = 64;
+            this.lbl_Noir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_Rouge
+            // 
+            this.lbl_Rouge.BackColor = System.Drawing.Color.White;
+            this.lbl_Rouge.Location = new System.Drawing.Point(378, 725);
+            this.lbl_Rouge.Name = "lbl_Rouge";
+            this.lbl_Rouge.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Rouge.TabIndex = 65;
+            this.lbl_Rouge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmd_LigneHaut
+            // 
+            this.cmd_LigneHaut.Location = new System.Drawing.Point(723, 469);
+            this.cmd_LigneHaut.Name = "cmd_LigneHaut";
+            this.cmd_LigneHaut.Size = new System.Drawing.Size(75, 23);
+            this.cmd_LigneHaut.TabIndex = 66;
+            this.cmd_LigneHaut.Text = "2 TO 1";
+            this.cmd_LigneHaut.UseVisualStyleBackColor = true;
+            this.cmd_LigneHaut.Click += new System.EventHandler(this.cmd_LigneHaut_Click);
+            // 
+            // cmd_LigneMil
+            // 
+            this.cmd_LigneMil.Location = new System.Drawing.Point(722, 534);
+            this.cmd_LigneMil.Name = "cmd_LigneMil";
+            this.cmd_LigneMil.Size = new System.Drawing.Size(75, 23);
+            this.cmd_LigneMil.TabIndex = 67;
+            this.cmd_LigneMil.Text = "2 TO 1";
+            this.cmd_LigneMil.UseVisualStyleBackColor = true;
+            this.cmd_LigneMil.Click += new System.EventHandler(this.cmd_LigneMil_Click);
+            // 
+            // cmd_LigneBas
+            // 
+            this.cmd_LigneBas.Location = new System.Drawing.Point(722, 607);
+            this.cmd_LigneBas.Name = "cmd_LigneBas";
+            this.cmd_LigneBas.Size = new System.Drawing.Size(75, 23);
+            this.cmd_LigneBas.TabIndex = 68;
+            this.cmd_LigneBas.Text = "2 TO 1";
+            this.cmd_LigneBas.UseVisualStyleBackColor = true;
+            this.cmd_LigneBas.Click += new System.EventHandler(this.cmd_LigneBas_Click);
+            // 
+            // lbl_LigneHaut
+            // 
+            this.lbl_LigneHaut.BackColor = System.Drawing.Color.White;
+            this.lbl_LigneHaut.Location = new System.Drawing.Point(737, 495);
+            this.lbl_LigneHaut.Name = "lbl_LigneHaut";
+            this.lbl_LigneHaut.Size = new System.Drawing.Size(46, 13);
+            this.lbl_LigneHaut.TabIndex = 69;
+            this.lbl_LigneHaut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_LigneMil
+            // 
+            this.lbl_LigneMil.BackColor = System.Drawing.Color.White;
+            this.lbl_LigneMil.Location = new System.Drawing.Point(737, 560);
+            this.lbl_LigneMil.Name = "lbl_LigneMil";
+            this.lbl_LigneMil.Size = new System.Drawing.Size(46, 13);
+            this.lbl_LigneMil.TabIndex = 70;
+            this.lbl_LigneMil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_LigneBas
+            // 
+            this.lbl_LigneBas.BackColor = System.Drawing.Color.White;
+            this.lbl_LigneBas.Location = new System.Drawing.Point(737, 633);
+            this.lbl_LigneBas.Name = "lbl_LigneBas";
+            this.lbl_LigneBas.Size = new System.Drawing.Size(46, 13);
+            this.lbl_LigneBas.TabIndex = 71;
+            this.lbl_LigneBas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Jeu_de_la_roulette.Properties.Resources.bg_frmaccueil;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1291, 794);
+            this.Controls.Add(this.lbl_LigneBas);
+            this.Controls.Add(this.lbl_LigneMil);
+            this.Controls.Add(this.lbl_LigneHaut);
+            this.Controls.Add(this.cmd_LigneBas);
+            this.Controls.Add(this.cmd_LigneMil);
+            this.Controls.Add(this.cmd_LigneHaut);
+            this.Controls.Add(this.lbl_Rouge);
+            this.Controls.Add(this.lbl_Noir);
+            this.Controls.Add(this.cmd_rouge);
+            this.Controls.Add(this.cmd_Noir);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.cmd_impair);
+            this.Controls.Add(this.cmd_paire);
+            this.Controls.Add(this.lbl_impaire);
+            this.Controls.Add(this.lbl_paire);
             this.Controls.Add(this.cmd_retirer);
             this.Controls.Add(this.lbl_mise28);
             this.Controls.Add(this.lbl_mise36);
@@ -587,8 +776,9 @@
             this.Controls.Add(this.txt_mise);
             this.Name = "Accueil";
             this.Text = "frm_roulette";
-            this.Load += new System.EventHandler(this.Accueil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,6 +835,22 @@
         private System.Windows.Forms.Label lbl_mise36;
         private System.Windows.Forms.Label lbl_mise28;
         private System.Windows.Forms.Button cmd_retirer;
+        private System.Windows.Forms.Label lbl_paire;
+        private System.Windows.Forms.Label lbl_impaire;
+        private System.Windows.Forms.Button cmd_paire;
+        private System.Windows.Forms.Button cmd_impair;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button cmd_Noir;
+        private System.Windows.Forms.Button cmd_rouge;
+        private System.Windows.Forms.Label lbl_Noir;
+        private System.Windows.Forms.Label lbl_Rouge;
+        private System.Windows.Forms.Button cmd_LigneHaut;
+        private System.Windows.Forms.Button cmd_LigneMil;
+        private System.Windows.Forms.Button cmd_LigneBas;
+        private System.Windows.Forms.Label lbl_LigneHaut;
+        private System.Windows.Forms.Label lbl_LigneMil;
+        private System.Windows.Forms.Label lbl_LigneBas;
     }
 }
 

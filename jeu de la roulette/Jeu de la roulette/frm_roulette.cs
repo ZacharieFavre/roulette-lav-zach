@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Jeu_de_la_roulette
 {
     public partial class Accueil : Form
     {
         int sommetotale;
+        int misePaire;
+        int miseImpaire;
+        int miseNoir;
+        int miseRouge;
+        int miseLigneHaut;
+        int miseLigneMil;
+        int miseLigneBas;
+
+        // Liste des mises sur les numéros
         List<int> lstnumero = new List<int>(new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 });
-        private object pic_randomchoisi;
 
         public Accueil()
         {
@@ -47,7 +56,7 @@ namespace Jeu_de_la_roulette
 
             mise = int.Parse(txt_mise.Text);
             numero = int.Parse(txt_numeromise.Text);
-            if (lstnumero[numero] <= 0)
+            if (lstnumero[numero] < mise)
             {
                 MessageBox.Show("Vous ne pouvez plus retirer");
             }
@@ -60,22 +69,6 @@ namespace Jeu_de_la_roulette
             ActualiserMise();
         }
 
-        private void Accueil_Load(object sender, EventArgs e)
-        {
-            int mise;
-            int numero;
-            if (txt_mise.Text!="") {
-                mise = int.Parse(txt_mise.Text);
-                numero = int.Parse(txt_numeromise.Text);
-
-                if (sommetotale >= mise)
-                {
-                    lstnumero[numero] += mise;
-                    sommetotale -= mise;
-                }
-                txt_sommetotal.Text = sommetotale.ToString();
-            }
-        }
 
         private void cmd_validersomme_Click(object sender, EventArgs e)
         {
@@ -90,7 +83,7 @@ namespace Jeu_de_la_roulette
             frm_regles frm_regle = new frm_regles();
             frm_regle.Show();
         }
-
+        
         private void cmd_tournerroulette_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -210,17 +203,262 @@ namespace Jeu_de_la_roulette
                     if (lstnumero[36] > 0) { sommetotale += lstnumero[36] * 36; }
                     break;
             }
-            if (numerotirer % 2 == 0)
+            
+            
+            if (numerotirer % 2 == 0 && misePaire > 0)
             {
-
+                sommetotale += misePaire * 2;
+            }
+            if (numerotirer % 2 != 0 && miseImpaire > 0)
+            {
+                sommetotale += miseImpaire * 2;
+            }
+            switch (numerotirer)
+            {
+                case 2:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 4:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 6:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 8:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 10:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 11:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 13:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 15:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 17:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 20:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 22:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 24:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 26:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 28:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 29:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 31:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 33:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+                case 35:
+                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    break;
+            }
+            switch (numerotirer)
+            {
+                case 1:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 3:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 5:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 7:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 9:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 12:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 14:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 16:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 18:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 19:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 21:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 23:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 25:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 27:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 30:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 32:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 34:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+                case 36:
+                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    break;
+            }
+            switch (numerotirer)
+            {
+                case 3:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 6:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 9:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 12:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 15:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 18:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 21:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 24:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 27:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 30:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 33:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+                case 36:
+                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    break;
+            }
+            switch (numerotirer)
+            {
+                case 2:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 5:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 8:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 11:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 14:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 17:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 20:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 23:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 26:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 29:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 32:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+                case 35:
+                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    break;
+            }
+            switch (numerotirer)
+            {
+                case 1:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 4:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 7:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 10:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 13:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 16:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 19:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 22:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 25:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 28:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 31:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
+                case 34:
+                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    break;
             }
             txt_sommetotal.Text = sommetotale.ToString();
-            //pic_randomchoisi.ImageLocation = "fichiers\\numero roulette\\" + numerotirer + ".png";
+            
+            pictureBox5.ImageLocation = @"C:\\roulette-lav-zach\\jeu de la roulette\\Jeu de la roulette\\fichiers\\numero roulette\\" + numerotirer + ".png";
             	
             for (int i=0;i<37;i++)
             {
             	lstnumero[i] = 0;
             }
+            misePaire = 0;
+            miseImpaire = 0;
+            miseRouge = 0;
+            miseNoir = 0;
+            miseLigneHaut = 0;
+            miseLigneMil = 0;
+            miseLigneBas = 0;
             ActualiserMise();
             			
             
@@ -264,8 +502,118 @@ namespace Jeu_de_la_roulette
             lbl_mise34.Text = lstnumero[34].ToString();
             lbl_mise35.Text = lstnumero[35].ToString();
             lbl_mise36.Text = lstnumero[36].ToString();
-           
+            lbl_paire.Text = misePaire.ToString();
+            lbl_impaire.Text = miseImpaire.ToString();
+            lbl_Noir.Text = miseNoir.ToString();
+            lbl_Rouge.Text = miseRouge.ToString();
+            lbl_LigneHaut.Text = miseLigneHaut.ToString();
+            lbl_LigneMil.Text = miseLigneMil.ToString();
+            lbl_LigneBas.Text = miseLigneBas.ToString();
         }
 
+        private void cmd_paire_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                misePaire += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_impair_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                miseImpaire += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_Noir_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                miseNoir += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_rouge_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                miseRouge += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_LigneHaut_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                miseLigneHaut += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_LigneMil_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                miseLigneMil += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_LigneBas_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                miseLigneBas += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
     }
 }
