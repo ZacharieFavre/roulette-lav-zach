@@ -94,6 +94,12 @@
             this.lbl_LigneHaut = new System.Windows.Forms.Label();
             this.lbl_LigneMil = new System.Windows.Forms.Label();
             this.lbl_LigneBas = new System.Windows.Forms.Label();
+            this.cmd_voisinDu0 = new System.Windows.Forms.Button();
+            this.lbl_VDZ = new System.Windows.Forms.Label();
+            this.cmd_Orph = new System.Windows.Forms.Button();
+            this.lbl_Orph = new System.Windows.Forms.Label();
+            this.cmd_Tiers = new System.Windows.Forms.Button();
+            this.lbl_Tiers = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -169,7 +175,7 @@
             // 
             // cmd_tournerroulette
             // 
-            this.cmd_tournerroulette.Location = new System.Drawing.Point(942, 534);
+            this.cmd_tournerroulette.Location = new System.Drawing.Point(1128, 555);
             this.cmd_tournerroulette.Name = "cmd_tournerroulette";
             this.cmd_tournerroulette.Size = new System.Drawing.Size(109, 23);
             this.cmd_tournerroulette.TabIndex = 10;
@@ -702,6 +708,63 @@
             this.lbl_LigneBas.TabIndex = 71;
             this.lbl_LigneBas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cmd_voisinDu0
+            // 
+            this.cmd_voisinDu0.Location = new System.Drawing.Point(844, 469);
+            this.cmd_voisinDu0.Name = "cmd_voisinDu0";
+            this.cmd_voisinDu0.Size = new System.Drawing.Size(88, 23);
+            this.cmd_voisinDu0.TabIndex = 72;
+            this.cmd_voisinDu0.Text = "Voisin du zéro";
+            this.cmd_voisinDu0.UseVisualStyleBackColor = true;
+            this.cmd_voisinDu0.Click += new System.EventHandler(this.cmd_voisinDu0_Click);
+            // 
+            // lbl_VDZ
+            // 
+            this.lbl_VDZ.BackColor = System.Drawing.Color.White;
+            this.lbl_VDZ.Location = new System.Drawing.Point(864, 495);
+            this.lbl_VDZ.Name = "lbl_VDZ";
+            this.lbl_VDZ.Size = new System.Drawing.Size(46, 13);
+            this.lbl_VDZ.TabIndex = 73;
+            this.lbl_VDZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmd_Orph
+            // 
+            this.cmd_Orph.Location = new System.Drawing.Point(844, 534);
+            this.cmd_Orph.Name = "cmd_Orph";
+            this.cmd_Orph.Size = new System.Drawing.Size(88, 23);
+            this.cmd_Orph.TabIndex = 74;
+            this.cmd_Orph.Text = "Orphelins";
+            this.cmd_Orph.UseVisualStyleBackColor = true;
+            this.cmd_Orph.Click += new System.EventHandler(this.cmd_Orph_Click);
+            // 
+            // lbl_Orph
+            // 
+            this.lbl_Orph.BackColor = System.Drawing.Color.White;
+            this.lbl_Orph.Location = new System.Drawing.Point(864, 560);
+            this.lbl_Orph.Name = "lbl_Orph";
+            this.lbl_Orph.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Orph.TabIndex = 75;
+            this.lbl_Orph.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmd_Tiers
+            // 
+            this.cmd_Tiers.Location = new System.Drawing.Point(844, 607);
+            this.cmd_Tiers.Name = "cmd_Tiers";
+            this.cmd_Tiers.Size = new System.Drawing.Size(88, 23);
+            this.cmd_Tiers.TabIndex = 76;
+            this.cmd_Tiers.Text = "Tiers";
+            this.cmd_Tiers.UseVisualStyleBackColor = true;
+            this.cmd_Tiers.Click += new System.EventHandler(this.cmd_Tiers_Click);
+            // 
+            // lbl_Tiers
+            // 
+            this.lbl_Tiers.BackColor = System.Drawing.Color.White;
+            this.lbl_Tiers.Location = new System.Drawing.Point(864, 633);
+            this.lbl_Tiers.Name = "lbl_Tiers";
+            this.lbl_Tiers.Size = new System.Drawing.Size(46, 13);
+            this.lbl_Tiers.TabIndex = 77;
+            this.lbl_Tiers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -709,6 +772,12 @@
             this.BackgroundImage = global::Jeu_de_la_roulette.Properties.Resources.bg_frmaccueil;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1291, 794);
+            this.Controls.Add(this.lbl_Tiers);
+            this.Controls.Add(this.cmd_Tiers);
+            this.Controls.Add(this.lbl_Orph);
+            this.Controls.Add(this.cmd_Orph);
+            this.Controls.Add(this.lbl_VDZ);
+            this.Controls.Add(this.cmd_voisinDu0);
             this.Controls.Add(this.lbl_LigneBas);
             this.Controls.Add(this.lbl_LigneMil);
             this.Controls.Add(this.lbl_LigneHaut);
@@ -851,6 +920,12 @@
         private System.Windows.Forms.Label lbl_LigneHaut;
         private System.Windows.Forms.Label lbl_LigneMil;
         private System.Windows.Forms.Label lbl_LigneBas;
+        private System.Windows.Forms.Button cmd_voisinDu0;
+        private System.Windows.Forms.Label lbl_VDZ;
+        private System.Windows.Forms.Button cmd_Orph;
+        private System.Windows.Forms.Label lbl_Orph;
+        private System.Windows.Forms.Button cmd_Tiers;
+        private System.Windows.Forms.Label lbl_Tiers;
     }
 }
 

@@ -88,7 +88,7 @@ namespace Jeu_de_la_roulette
         {
             Random rnd = new Random();
             int numerotirer = rnd.Next(0, 37);
-
+            //LSJ
             switch (numerotirer)
             {
                 case 0:
@@ -204,15 +204,17 @@ namespace Jeu_de_la_roulette
                     break;
             }
             
-            
+            //LSJ
             if (numerotirer % 2 == 0 && misePaire > 0)
             {
                 sommetotale += misePaire * 2;
             }
+            //LSJ
             if (numerotirer % 2 != 0 && miseImpaire > 0)
             {
                 sommetotale += miseImpaire * 2;
             }
+            //ZFE
             switch (numerotirer)
             {
                 case 2:
@@ -270,6 +272,7 @@ namespace Jeu_de_la_roulette
                     if (miseNoir > 0) { sommetotale += miseNoir * 2; }
                     break;
             }
+            //ZFE
             switch (numerotirer)
             {
                 case 1:
@@ -327,6 +330,7 @@ namespace Jeu_de_la_roulette
                     if (miseRouge > 0) { sommetotale += miseRouge * 2; }
                     break;
             }
+            //ZFE
             switch (numerotirer)
             {
                 case 3:
@@ -366,6 +370,7 @@ namespace Jeu_de_la_roulette
                     if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
                     break;
             }
+            //ZFE
             switch (numerotirer)
             {
                 case 2:
@@ -405,6 +410,7 @@ namespace Jeu_de_la_roulette
                     if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
                     break;
             }
+            //ZFE
             switch (numerotirer)
             {
                 case 1:
@@ -611,6 +617,84 @@ namespace Jeu_de_la_roulette
             {
                 miseLigneBas += mise;
                 sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_voisinDu0_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                lstnumero[22] += mise;
+                lstnumero[19] += mise;
+                lstnumero[18] += mise;
+                lstnumero[7] += mise;
+                lstnumero[28] += mise;
+                lstnumero[12] += mise;
+                lstnumero[35] += mise;
+                lstnumero[3] += mise;
+                lstnumero[26] += mise;
+                lstnumero[0] += mise;
+                lstnumero[32] += mise;
+                lstnumero[15] += mise;
+                lstnumero[4] += mise;
+                lstnumero[21] += mise;
+                lstnumero[2] += mise;
+                lstnumero[25] += mise;
+                sommetotale -= 17 * mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_Orph_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                lstnumero[9] += mise;
+                lstnumero[31] += mise;
+                lstnumero[14] += mise;
+                lstnumero[20] += mise;
+                lstnumero[1] += mise;
+                lstnumero[17] += mise;
+                lstnumero[34] += mise;
+                lstnumero[6] += mise;
+                sommetotale -= 8 * mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_Tiers_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                lstnumero[27] += mise;
+                lstnumero[13] += mise;
+                lstnumero[36] += mise;
+                lstnumero[11] += mise;
+                lstnumero[30] += mise;
+                lstnumero[8] += mise;
+                lstnumero[23] += mise;
+                lstnumero[10] += mise;
+                lstnumero[5] += mise;
+                lstnumero[24] += mise;
+                lstnumero[16] += mise;
+                lstnumero[33] += mise;
+                sommetotale -= 12 * mise;
             }
             txt_sommetotal.Text = sommetotale.ToString();
             ActualiserMise();
