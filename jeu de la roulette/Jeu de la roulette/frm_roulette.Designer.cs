@@ -95,11 +95,14 @@
             this.lbl_LigneMil = new System.Windows.Forms.Label();
             this.lbl_LigneBas = new System.Windows.Forms.Label();
             this.cmd_voisinDu0 = new System.Windows.Forms.Button();
-            this.lbl_VDZ = new System.Windows.Forms.Label();
             this.cmd_Orph = new System.Windows.Forms.Button();
-            this.lbl_Orph = new System.Windows.Forms.Label();
             this.cmd_Tiers = new System.Windows.Forms.Button();
-            this.lbl_Tiers = new System.Windows.Forms.Label();
+            this.cmd_1to12 = new System.Windows.Forms.Button();
+            this.cmd_25to36 = new System.Windows.Forms.Button();
+            this.cmd_13to24 = new System.Windows.Forms.Button();
+            this.lbl_1to12 = new System.Windows.Forms.Label();
+            this.lbl_13to24 = new System.Windows.Forms.Label();
+            this.lbl_25to36 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -115,6 +118,7 @@
             // lbl_mise
             // 
             this.lbl_mise.AutoSize = true;
+            this.lbl_mise.BackColor = System.Drawing.Color.Transparent;
             this.lbl_mise.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_mise.Location = new System.Drawing.Point(8, 382);
             this.lbl_mise.Name = "lbl_mise";
@@ -155,8 +159,10 @@
             // lbl_sommetotal
             // 
             this.lbl_sommetotal.AutoSize = true;
+            this.lbl_sommetotal.BackColor = System.Drawing.Color.Transparent;
             this.lbl_sommetotal.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_sommetotal.Location = new System.Drawing.Point(68, 37);
+            this.lbl_sommetotal.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_sommetotal.Location = new System.Drawing.Point(69, 37);
             this.lbl_sommetotal.Name = "lbl_sommetotal";
             this.lbl_sommetotal.Size = new System.Drawing.Size(129, 23);
             this.lbl_sommetotal.TabIndex = 7;
@@ -175,7 +181,7 @@
             // 
             // cmd_tournerroulette
             // 
-            this.cmd_tournerroulette.Location = new System.Drawing.Point(1128, 555);
+            this.cmd_tournerroulette.Location = new System.Drawing.Point(1038, 534);
             this.cmd_tournerroulette.Name = "cmd_tournerroulette";
             this.cmd_tournerroulette.Size = new System.Drawing.Size(109, 23);
             this.cmd_tournerroulette.TabIndex = 10;
@@ -193,6 +199,7 @@
             // lbl_numeromise
             // 
             this.lbl_numeromise.AutoSize = true;
+            this.lbl_numeromise.BackColor = System.Drawing.Color.Transparent;
             this.lbl_numeromise.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_numeromise.Location = new System.Drawing.Point(336, 358);
             this.lbl_numeromise.Name = "lbl_numeromise";
@@ -556,7 +563,7 @@
             // lbl_paire
             // 
             this.lbl_paire.BackColor = System.Drawing.Color.White;
-            this.lbl_paire.Location = new System.Drawing.Point(70, 725);
+            this.lbl_paire.Location = new System.Drawing.Point(70, 712);
             this.lbl_paire.Name = "lbl_paire";
             this.lbl_paire.Size = new System.Drawing.Size(46, 13);
             this.lbl_paire.TabIndex = 53;
@@ -565,7 +572,7 @@
             // lbl_impaire
             // 
             this.lbl_impaire.BackColor = System.Drawing.Color.White;
-            this.lbl_impaire.Location = new System.Drawing.Point(523, 725);
+            this.lbl_impaire.Location = new System.Drawing.Point(527, 712);
             this.lbl_impaire.Name = "lbl_impaire";
             this.lbl_impaire.Size = new System.Drawing.Size(46, 13);
             this.lbl_impaire.TabIndex = 54;
@@ -636,7 +643,7 @@
             // lbl_Noir
             // 
             this.lbl_Noir.BackColor = System.Drawing.Color.White;
-            this.lbl_Noir.Location = new System.Drawing.Point(209, 725);
+            this.lbl_Noir.Location = new System.Drawing.Point(219, 712);
             this.lbl_Noir.Name = "lbl_Noir";
             this.lbl_Noir.Size = new System.Drawing.Size(46, 13);
             this.lbl_Noir.TabIndex = 64;
@@ -645,7 +652,7 @@
             // lbl_Rouge
             // 
             this.lbl_Rouge.BackColor = System.Drawing.Color.White;
-            this.lbl_Rouge.Location = new System.Drawing.Point(378, 725);
+            this.lbl_Rouge.Location = new System.Drawing.Point(381, 712);
             this.lbl_Rouge.Name = "lbl_Rouge";
             this.lbl_Rouge.Size = new System.Drawing.Size(46, 13);
             this.lbl_Rouge.TabIndex = 65;
@@ -718,15 +725,6 @@
             this.cmd_voisinDu0.UseVisualStyleBackColor = true;
             this.cmd_voisinDu0.Click += new System.EventHandler(this.cmd_voisinDu0_Click);
             // 
-            // lbl_VDZ
-            // 
-            this.lbl_VDZ.BackColor = System.Drawing.Color.White;
-            this.lbl_VDZ.Location = new System.Drawing.Point(864, 495);
-            this.lbl_VDZ.Name = "lbl_VDZ";
-            this.lbl_VDZ.Size = new System.Drawing.Size(46, 13);
-            this.lbl_VDZ.TabIndex = 73;
-            this.lbl_VDZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // cmd_Orph
             // 
             this.cmd_Orph.Location = new System.Drawing.Point(844, 534);
@@ -736,15 +734,6 @@
             this.cmd_Orph.Text = "Orphelins";
             this.cmd_Orph.UseVisualStyleBackColor = true;
             this.cmd_Orph.Click += new System.EventHandler(this.cmd_Orph_Click);
-            // 
-            // lbl_Orph
-            // 
-            this.lbl_Orph.BackColor = System.Drawing.Color.White;
-            this.lbl_Orph.Location = new System.Drawing.Point(864, 560);
-            this.lbl_Orph.Name = "lbl_Orph";
-            this.lbl_Orph.Size = new System.Drawing.Size(46, 13);
-            this.lbl_Orph.TabIndex = 75;
-            this.lbl_Orph.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cmd_Tiers
             // 
@@ -756,14 +745,62 @@
             this.cmd_Tiers.UseVisualStyleBackColor = true;
             this.cmd_Tiers.Click += new System.EventHandler(this.cmd_Tiers_Click);
             // 
-            // lbl_Tiers
+            // cmd_1to12
             // 
-            this.lbl_Tiers.BackColor = System.Drawing.Color.White;
-            this.lbl_Tiers.Location = new System.Drawing.Point(864, 633);
-            this.lbl_Tiers.Name = "lbl_Tiers";
-            this.lbl_Tiers.Size = new System.Drawing.Size(46, 13);
-            this.lbl_Tiers.TabIndex = 77;
-            this.lbl_Tiers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmd_1to12.Location = new System.Drawing.Point(127, 757);
+            this.cmd_1to12.Name = "cmd_1to12";
+            this.cmd_1to12.Size = new System.Drawing.Size(75, 23);
+            this.cmd_1to12.TabIndex = 77;
+            this.cmd_1to12.Text = "1 TO 12";
+            this.cmd_1to12.UseVisualStyleBackColor = true;
+            this.cmd_1to12.Click += new System.EventHandler(this.cmd_1to12_Click);
+            // 
+            // cmd_25to36
+            // 
+            this.cmd_25to36.Location = new System.Drawing.Point(567, 757);
+            this.cmd_25to36.Name = "cmd_25to36";
+            this.cmd_25to36.Size = new System.Drawing.Size(75, 23);
+            this.cmd_25to36.TabIndex = 78;
+            this.cmd_25to36.Text = "25 TO 36";
+            this.cmd_25to36.UseVisualStyleBackColor = true;
+            this.cmd_25to36.Click += new System.EventHandler(this.cmd_25to36_Click);
+            // 
+            // cmd_13to24
+            // 
+            this.cmd_13to24.Location = new System.Drawing.Point(343, 757);
+            this.cmd_13to24.Name = "cmd_13to24";
+            this.cmd_13to24.Size = new System.Drawing.Size(75, 23);
+            this.cmd_13to24.TabIndex = 79;
+            this.cmd_13to24.Text = "13 TO 24";
+            this.cmd_13to24.UseVisualStyleBackColor = true;
+            this.cmd_13to24.Click += new System.EventHandler(this.cmd_13to24_Click);
+            // 
+            // lbl_1to12
+            // 
+            this.lbl_1to12.BackColor = System.Drawing.Color.White;
+            this.lbl_1to12.Location = new System.Drawing.Point(143, 783);
+            this.lbl_1to12.Name = "lbl_1to12";
+            this.lbl_1to12.Size = new System.Drawing.Size(46, 13);
+            this.lbl_1to12.TabIndex = 80;
+            this.lbl_1to12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_13to24
+            // 
+            this.lbl_13to24.BackColor = System.Drawing.Color.White;
+            this.lbl_13to24.Location = new System.Drawing.Point(358, 783);
+            this.lbl_13to24.Name = "lbl_13to24";
+            this.lbl_13to24.Size = new System.Drawing.Size(46, 13);
+            this.lbl_13to24.TabIndex = 81;
+            this.lbl_13to24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_25to36
+            // 
+            this.lbl_25to36.BackColor = System.Drawing.Color.White;
+            this.lbl_25to36.Location = new System.Drawing.Point(582, 783);
+            this.lbl_25to36.Name = "lbl_25to36";
+            this.lbl_25to36.Size = new System.Drawing.Size(46, 13);
+            this.lbl_25to36.TabIndex = 82;
+            this.lbl_25to36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Accueil
             // 
@@ -771,12 +808,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Jeu_de_la_roulette.Properties.Resources.bg_frmaccueil;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1291, 794);
-            this.Controls.Add(this.lbl_Tiers);
+            this.ClientSize = new System.Drawing.Size(1291, 817);
+            this.Controls.Add(this.lbl_25to36);
+            this.Controls.Add(this.lbl_13to24);
+            this.Controls.Add(this.lbl_1to12);
+            this.Controls.Add(this.cmd_13to24);
+            this.Controls.Add(this.cmd_25to36);
+            this.Controls.Add(this.cmd_1to12);
             this.Controls.Add(this.cmd_Tiers);
-            this.Controls.Add(this.lbl_Orph);
             this.Controls.Add(this.cmd_Orph);
-            this.Controls.Add(this.lbl_VDZ);
             this.Controls.Add(this.cmd_voisinDu0);
             this.Controls.Add(this.lbl_LigneBas);
             this.Controls.Add(this.lbl_LigneMil);
@@ -921,11 +961,14 @@
         private System.Windows.Forms.Label lbl_LigneMil;
         private System.Windows.Forms.Label lbl_LigneBas;
         private System.Windows.Forms.Button cmd_voisinDu0;
-        private System.Windows.Forms.Label lbl_VDZ;
         private System.Windows.Forms.Button cmd_Orph;
-        private System.Windows.Forms.Label lbl_Orph;
         private System.Windows.Forms.Button cmd_Tiers;
-        private System.Windows.Forms.Label lbl_Tiers;
+        private System.Windows.Forms.Button cmd_1to12;
+        private System.Windows.Forms.Button cmd_25to36;
+        private System.Windows.Forms.Button cmd_13to24;
+        private System.Windows.Forms.Label lbl_1to12;
+        private System.Windows.Forms.Label lbl_13to24;
+        private System.Windows.Forms.Label lbl_25to36;
     }
 }
 

@@ -13,6 +13,7 @@ namespace Jeu_de_la_roulette
 {
     public partial class Accueil : Form
     {
+        int numerotirer;
         int sommetotale;
         int misePaire;
         int miseImpaire;
@@ -21,6 +22,10 @@ namespace Jeu_de_la_roulette
         int miseLigneHaut;
         int miseLigneMil;
         int miseLigneBas;
+        int mise1to12;
+        int mise13to24;
+        int mise25to36;
+        int gain;
 
         // Liste des mises sur les numéros
         List<int> lstnumero = new List<int>(new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 });
@@ -51,22 +56,10 @@ namespace Jeu_de_la_roulette
 
         private void cmd_retirer_Click(object sender, EventArgs e)
         {
-            int mise;
-            int numero;
-
-            mise = int.Parse(txt_mise.Text);
-            numero = int.Parse(txt_numeromise.Text);
-            if (lstnumero[numero] < mise)
-            {
-                MessageBox.Show("Vous ne pouvez plus retirer");
-            }
-            else
-            {
-                lstnumero[numero] -= mise;
-                sommetotale += mise;
-            }
+            int touteMise = mise13to24 + mise1to12 + mise25to36 + miseImpaire + misePaire + miseNoir + miseRouge + miseLigneHaut + miseLigneMil + miseLigneBas + lstnumero[0] + lstnumero[1] + lstnumero[2] + lstnumero[3] + lstnumero[4] + lstnumero[5] + lstnumero[6] + lstnumero[7] + lstnumero[8] + lstnumero[9] + lstnumero[10] + lstnumero[11] + lstnumero[12] + lstnumero[13] + lstnumero[14] + lstnumero[15] + lstnumero[16] + lstnumero[17] + lstnumero[18] + lstnumero[19] + lstnumero[20] + lstnumero[21] + lstnumero[22] + lstnumero[23] + lstnumero[24] + lstnumero[25] + lstnumero[26] + lstnumero[27] + lstnumero[28] + lstnumero[29] + lstnumero[30] + lstnumero[31] + lstnumero[32] + lstnumero[33] + lstnumero[34] + lstnumero[35] + lstnumero[36];
+            sommetotale += touteMise;
+            erease();
             txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
 
@@ -87,387 +80,1078 @@ namespace Jeu_de_la_roulette
         private void cmd_tournerroulette_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int numerotirer = rnd.Next(0, 37);
+            numerotirer = rnd.Next(0, 37);
             //LSJ
             switch (numerotirer)
             {
                 case 0:
-                    if (lstnumero[0] > 0) { sommetotale += lstnumero[0] * 36; }
+                    if (lstnumero[0] > 0) {
+                        gain = lstnumero[0] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 1:
-                    if (lstnumero[1] > 0) { sommetotale += lstnumero[1] * 36; }
+                    if (lstnumero[1] > 0) {
+                        gain = lstnumero[1] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 2:
-                    if (lstnumero[2] > 0) { sommetotale += lstnumero[2] * 36; }
+                    if (lstnumero[2] > 0) {
+                        gain = lstnumero[2] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 3:
-                    if (lstnumero[3] > 0) { sommetotale += lstnumero[3] * 36; }
+                    if (lstnumero[3] > 0) {
+                        gain = lstnumero[3] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 4:
-                    if (lstnumero[4] > 0) { sommetotale += lstnumero[4] * 36; }
+                    if (lstnumero[4] > 0) {
+                        gain = lstnumero[4] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 5:
-                    if (lstnumero[5] > 0) { sommetotale += lstnumero[5] * 36; }
+                    if (lstnumero[5] > 0) {
+                        gain = lstnumero[5] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 6:
-                    if (lstnumero[6] > 0) { sommetotale += lstnumero[6] * 36; }
+                    if (lstnumero[6] > 0) {
+                        gain = lstnumero[6] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 7:
-                    if (lstnumero[7] > 0) { sommetotale += lstnumero[7] * 36; }
+                    if (lstnumero[7] > 0) {
+                        gain = lstnumero[7] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 8:
-                    if (lstnumero[8] > 0) { sommetotale += lstnumero[8] * 36; }
+                    if (lstnumero[8] > 0) {
+                        gain = lstnumero[8] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 9:
-                    if (lstnumero[9] > 0) { sommetotale += lstnumero[9] * 36; }
+                    if (lstnumero[9] > 0) {
+                        gain = lstnumero[9] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 10:
-                    if (lstnumero[10] > 0) { sommetotale += lstnumero[10] * 36; }
+                    if (lstnumero[10] > 0) {
+                        gain = lstnumero[10] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 11:
-                    if (lstnumero[11] > 0) { sommetotale += lstnumero[11] * 36; }
+                    if (lstnumero[11] > 0) {
+                        gain = lstnumero[11] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 12:
-                    if (lstnumero[12] > 0) { sommetotale += lstnumero[12] * 36; }
+                    if (lstnumero[12] > 0) {
+                        gain = lstnumero[12] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 13:
-                    if (lstnumero[13] > 0) { sommetotale += lstnumero[13] * 36; }
+                    if (lstnumero[13] > 0) {
+                        gain = lstnumero[13] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 14:
-                    if (lstnumero[14] > 0) { sommetotale += lstnumero[14] * 36; }
+                    if (lstnumero[14] > 0) {
+                        gain = lstnumero[14] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 15:
-                    if (lstnumero[15] > 0) { sommetotale += lstnumero[15] * 36; }
+                    if (lstnumero[15] > 0) {
+                        gain = lstnumero[15] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 16:
-                    if (lstnumero[16] > 0) { sommetotale += lstnumero[16] * 36; }
+                    if (lstnumero[16] > 0) {
+                        gain = lstnumero[16] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 17:
-                    if (lstnumero[17] > 0) { sommetotale += lstnumero[17] * 36; }
+                    if (lstnumero[17] > 0) {
+                        gain = lstnumero[17] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 18:
-                    if (lstnumero[18] > 0) { sommetotale += lstnumero[18] * 36; }
+                    if (lstnumero[18] > 0) {
+                        gain = lstnumero[18] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 19:
-                    if (lstnumero[19] > 0) { sommetotale += lstnumero[19] * 36; }
+                    if (lstnumero[19] > 0) {
+                        gain = lstnumero[19] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 20:
-                    if (lstnumero[20] > 0) { sommetotale += lstnumero[20] * 36; }
+                    if (lstnumero[20] > 0) {
+                        gain = lstnumero[20] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 21:
-                    if (lstnumero[21] > 0) { sommetotale += lstnumero[21] * 36; }
+                    if (lstnumero[21] > 0) {
+                        gain = lstnumero[21] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 22:
-                    if (lstnumero[22] > 0) { sommetotale += lstnumero[22] * 36; }
+                    if (lstnumero[22] > 0) {
+                        gain = lstnumero[22] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 23:
-                    if (lstnumero[23] > 0) { sommetotale += lstnumero[23] * 36; }
+                    if (lstnumero[23] > 0) {
+                        gain = lstnumero[23] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 24:
-                    if (lstnumero[24] > 0) { sommetotale += lstnumero[24] * 36; }
+                    if (lstnumero[24] > 0) {
+                        gain = lstnumero[24] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 25:
-                    if (lstnumero[25] > 0) { sommetotale += lstnumero[25] * 36; }
+                    if (lstnumero[25] > 0) {
+                        gain = lstnumero[25] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 26:
-                    if (lstnumero[26] > 0) { sommetotale += lstnumero[26] * 36; }
+                    if (lstnumero[26] > 0) {
+                        gain = lstnumero[26] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 27:
-                    if (lstnumero[27] > 0) { sommetotale += lstnumero[27] * 36; }
+                    if (lstnumero[27] > 0) {
+                        gain = lstnumero[27] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 28:
-                    if (lstnumero[28] > 0) { sommetotale += lstnumero[28] * 36; }
+                    if (lstnumero[28] > 0) {
+                        gain = lstnumero[28] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 29:
-                    if (lstnumero[29] > 0) { sommetotale += lstnumero[29] * 36; }
+                    if (lstnumero[29] > 0) {
+                        gain = lstnumero[29] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 30:
-                    if (lstnumero[30] > 0) { sommetotale += lstnumero[30] * 36; }
+                    if (lstnumero[30] > 0) {
+                        gain = lstnumero[30] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 31:
-                    if (lstnumero[31] > 0) { sommetotale += lstnumero[31] * 36; }
+                    if (lstnumero[31] > 0) {
+                        gain = lstnumero[31] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 32:
-                    if (lstnumero[32] > 0) { sommetotale += lstnumero[32] * 36; }
+                    if (lstnumero[32] > 0) {
+                        gain = lstnumero[32] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 33:
-                    if (lstnumero[33] > 0) { sommetotale += lstnumero[33] * 36; }
+                    if (lstnumero[33] > 0) {
+                        gain = lstnumero[33] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 34:
-                    if (lstnumero[34] > 0) { sommetotale += lstnumero[34] * 36; }
+                    if (lstnumero[34] > 0) {
+                        gain = lstnumero[34] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 35:
-                    if (lstnumero[35] > 0) { sommetotale += lstnumero[35] * 36; }
+                    if (lstnumero[35] > 0) {
+                        gain = lstnumero[35] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 36:
-                    if (lstnumero[36] > 0) { sommetotale += lstnumero[36] * 36; }
+                    if (lstnumero[36] > 0) {
+                        gain = lstnumero[36] * 36;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
             }
             
             //LSJ
             if (numerotirer % 2 == 0 && misePaire > 0)
             {
-                sommetotale += misePaire * 2;
+                gain= misePaire * 2;
+                sommetotale += gain;
+                gagne();
             }
             //LSJ
             if (numerotirer % 2 != 0 && miseImpaire > 0)
             {
-                sommetotale += miseImpaire * 2;
+                gain= miseImpaire * 2;
+                sommetotale += gain;
+                gagne();
             }
             //ZFE
             switch (numerotirer)
             {
                 case 2:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 4:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 6:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 8:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 10:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 11:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 13:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 15:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 17:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 20:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 22:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 24:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 26:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 28:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 29:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 31:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 33:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 35:
-                    if (miseNoir > 0) { sommetotale += miseNoir * 2; }
+                    if (miseNoir > 0) {
+                        gain = miseNoir * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
             }
             //ZFE
             switch (numerotirer)
             {
                 case 1:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 3:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 5:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 7:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 9:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 12:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 14:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 16:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 18:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 19:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 21:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 23:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 25:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 27:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 30:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 32:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 34:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 36:
-                    if (miseRouge > 0) { sommetotale += miseRouge * 2; }
+                    if (miseRouge > 0) {
+                        gain = miseRouge * 2;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
             }
             //ZFE
             switch (numerotirer)
             {
                 case 3:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 6:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 9:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 12:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 15:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 18:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 21:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 24:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 27:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 30:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 33:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 36:
-                    if (miseLigneHaut > 0) { sommetotale += miseLigneHaut * 3; }
+                    if (miseLigneHaut > 0) {
+                        gain = miseLigneHaut * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
             }
             //ZFE
             switch (numerotirer)
             {
                 case 2:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 5:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 8:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 11:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 14:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 17:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 20:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 23:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 26:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 29:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 32:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 35:
-                    if (miseLigneMil > 0) { sommetotale += miseLigneMil * 3; }
+                    if (miseLigneMil > 0) {
+                        gain = miseLigneMil * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
             }
             //ZFE
             switch (numerotirer)
             {
                 case 1:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 4:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 7:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 10:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 13:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 16:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 19:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 22:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 25:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 28:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 31:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
                 case 34:
-                    if (miseLigneBas > 0) { sommetotale += miseLigneBas * 3; }
+                    if (miseLigneBas > 0) {
+                        gain = miseLigneBas * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+            }
+            //LSJ
+            switch (numerotirer)
+            {
+                case 1:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 2:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 3:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 4:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 5:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 6:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 7:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 8:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 9:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 10:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 11:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 12:
+                    if (mise1to12 > 0) {
+                        gain = mise1to12 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+            }
+            //LSJ
+            switch (numerotirer)
+            {
+                case 13:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 14:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 15:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 16:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 17:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 18:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 19:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 20:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 21:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 22:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 23:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 24:
+                    if (mise13to24 > 0) {
+                        gain = mise13to24 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+            }
+            //ZFE
+            switch (numerotirer)
+            {
+                case 25:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 26:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 27:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 28:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 29:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 30:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 31:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 32:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 33:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 34:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 35:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
+                    break;
+                case 36:
+                    if (mise25to36 > 0) {
+                        gain = mise25to36 * 3;
+                        sommetotale += gain;
+                        gagne();
+                    }
                     break;
             }
             txt_sommetotal.Text = sommetotale.ToString();
             
             pictureBox5.ImageLocation = @"C:\\roulette-lav-zach\\jeu de la roulette\\Jeu de la roulette\\fichiers\\numero roulette\\" + numerotirer + ".png";
-            	
-            for (int i=0;i<37;i++)
-            {
-            	lstnumero[i] = 0;
-            }
-            misePaire = 0;
-            miseImpaire = 0;
-            miseRouge = 0;
-            miseNoir = 0;
-            miseLigneHaut = 0;
-            miseLigneMil = 0;
-            miseLigneBas = 0;
-            ActualiserMise();
-            			
-            
+
+            erease();            
         }
         private void ActualiserMise()
         {
@@ -515,6 +1199,9 @@ namespace Jeu_de_la_roulette
             lbl_LigneHaut.Text = miseLigneHaut.ToString();
             lbl_LigneMil.Text = miseLigneMil.ToString();
             lbl_LigneBas.Text = miseLigneBas.ToString();
+            lbl_1to12.Text = mise1to12.ToString();
+            lbl_13to24.Text = mise13to24.ToString();
+            lbl_25to36.Text = mise25to36.ToString();
         }
 
         private void cmd_paire_Click(object sender, EventArgs e)
@@ -697,6 +1384,73 @@ namespace Jeu_de_la_roulette
                 sommetotale -= 12 * mise;
             }
             txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_1to12_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                mise1to12 += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_13to24_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                mise13to24 += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+
+        private void cmd_25to36_Click(object sender, EventArgs e)
+        {
+            int mise;
+
+            mise = int.Parse(txt_mise.Text);
+
+            if (sommetotale >= mise)
+            {
+                mise25to36 += mise;
+                sommetotale -= mise;
+            }
+            txt_sommetotal.Text = sommetotale.ToString();
+            ActualiserMise();
+        }
+        private void gagne()
+        {
+            MessageBox.Show("Tu as gagné " + gain + " sur le " + numerotirer);
+        }
+        private void erease()
+        {
+            for (int i = 0; i < 37; i++)
+            {
+                lstnumero[i] = 0;
+            }
+            misePaire = 0;
+            miseImpaire = 0;
+            miseRouge = 0;
+            miseNoir = 0;
+            miseLigneHaut = 0;
+            miseLigneMil = 0;
+            miseLigneBas = 0;
+            mise1to12 = 0;
+            mise13to24 = 0;
+            mise25to36 = 0;
             ActualiserMise();
         }
     }
