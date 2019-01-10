@@ -82,7 +82,6 @@
             this.lbl_impaire = new System.Windows.Forms.Label();
             this.cmd_paire = new System.Windows.Forms.Button();
             this.cmd_impair = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.cmd_Noir = new System.Windows.Forms.Button();
             this.cmd_rouge = new System.Windows.Forms.Button();
@@ -104,7 +103,6 @@
             this.lbl_13to24 = new System.Windows.Forms.Label();
             this.lbl_25to36 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,7 +131,7 @@
             this.cmd_Valider.Enabled = false;
             this.cmd_Valider.Location = new System.Drawing.Point(425, 359);
             this.cmd_Valider.Name = "cmd_Valider";
-            this.cmd_Valider.Size = new System.Drawing.Size(148, 64);
+            this.cmd_Valider.Size = new System.Drawing.Size(148, 70);
             this.cmd_Valider.TabIndex = 2;
             this.cmd_Valider.UseCompatibleTextRendering = true;
             this.cmd_Valider.UseVisualStyleBackColor = true;
@@ -598,18 +596,10 @@
             this.cmd_impair.UseVisualStyleBackColor = true;
             this.cmd_impair.Click += new System.EventHandler(this.cmd_impair_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 57;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Location = new System.Drawing.Point(791, 165);
+            this.pictureBox5.Location = new System.Drawing.Point(925, 209);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(141, 153);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -829,7 +819,6 @@
             this.Controls.Add(this.cmd_rouge);
             this.Controls.Add(this.cmd_Noir);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.cmd_impair);
             this.Controls.Add(this.cmd_paire);
             this.Controls.Add(this.lbl_impaire);
@@ -886,7 +875,6 @@
             this.Name = "Accueil";
             this.Text = "frm_roulette";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -948,7 +936,6 @@
         private System.Windows.Forms.Label lbl_impaire;
         private System.Windows.Forms.Button cmd_paire;
         private System.Windows.Forms.Button cmd_impair;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button cmd_Noir;
         private System.Windows.Forms.Button cmd_rouge;

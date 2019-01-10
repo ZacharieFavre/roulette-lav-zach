@@ -345,21 +345,21 @@ namespace Jeu_de_la_roulette
                     break;
             }
             
-            //LSJ
+            //LSJ Paire
             if (numerotirer % 2 == 0 && misePaire > 0)
             {
                 gain= misePaire * 2;
                 sommetotale += gain;
                 gagne();
             }
-            //LSJ
+            //LSJ Impaire
             if (numerotirer % 2 != 0 && miseImpaire > 0)
             {
                 gain= miseImpaire * 2;
                 sommetotale += gain;
                 gagne();
             }
-            //ZFE
+            //ZFE Noir
             switch (numerotirer)
             {
                 case 2:
@@ -489,7 +489,7 @@ namespace Jeu_de_la_roulette
                     }
                     break;
             }
-            //ZFE
+            //ZFE Rouge
             switch (numerotirer)
             {
                 case 1:
@@ -619,7 +619,7 @@ namespace Jeu_de_la_roulette
                     }
                     break;
             }
-            //ZFE
+            //ZFE Ligne haut
             switch (numerotirer)
             {
                 case 3:
@@ -707,7 +707,7 @@ namespace Jeu_de_la_roulette
                     }
                     break;
             }
-            //ZFE
+            //ZFE Ligne milieu
             switch (numerotirer)
             {
                 case 2:
@@ -795,7 +795,7 @@ namespace Jeu_de_la_roulette
                     }
                     break;
             }
-            //ZFE
+            //ZFE ligne bas
             switch (numerotirer)
             {
                 case 1:
@@ -883,7 +883,7 @@ namespace Jeu_de_la_roulette
                     }
                     break;
             }
-            //LSJ
+            //LSJ 1 à 12
             switch (numerotirer)
             {
                 case 1:
@@ -971,7 +971,7 @@ namespace Jeu_de_la_roulette
                     }
                     break;
             }
-            //LSJ
+            //LSJ 13 à 24
             switch (numerotirer)
             {
                 case 13:
@@ -1059,7 +1059,7 @@ namespace Jeu_de_la_roulette
                     }
                     break;
             }
-            //ZFE
+            //ZFE 25 à 36
             switch (numerotirer)
             {
                 case 25:
@@ -1333,6 +1333,7 @@ namespace Jeu_de_la_roulette
                 lstnumero[21] += mise;
                 lstnumero[2] += mise;
                 lstnumero[25] += mise;
+                lstnumero[29] += mise;
                 sommetotale -= 17 * mise;
             }
             txt_sommetotal.Text = sommetotale.ToString();

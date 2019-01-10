@@ -39,12 +39,11 @@
             this.lbl6 = new System.Windows.Forms.Label();
             this.lbl7 = new System.Windows.Forms.Label();
             this.lbl8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,10 +77,10 @@
             this.lbl1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbl1.Location = new System.Drawing.Point(45, 101);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(524, 16);
+            this.lbl1.Size = new System.Drawing.Size(728, 16);
             this.lbl1.TabIndex = 2;
             this.lbl1.Text = "Le joueur peut miser sur les pairs, impairs, rouge, noir, lignes haut, bas, milie" +
-    "u, un nombre";
+    "u, une colonne gauche, milieu, droite, un nombre";
             // 
             // lbl2
             // 
@@ -127,9 +126,9 @@
             this.lbl5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbl5.Location = new System.Drawing.Point(75, 293);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(83, 16);
+            this.lbl5.Size = new System.Drawing.Size(151, 16);
             this.lbl5.TabIndex = 6;
-            this.lbl5.Text = "- Lignes = x3";
+            this.lbl5.Text = "- Lignes et colonnes = x3";
             // 
             // lbl6
             // 
@@ -168,20 +167,12 @@
             this.lbl8.TabIndex = 9;
             this.lbl8.Text = "Si la bille s\'arrête sur un nombre perdant le joueur perds ce qu\'il a misé.";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(590, 101);
+            this.pictureBox3.Location = new System.Drawing.Point(569, 143);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(221, 227);
             this.pictureBox3.TabIndex = 11;
@@ -212,16 +203,29 @@
             this.label2.Text = "en misant sur une région vous allez miser sur chaques nombre de cette région indi" +
     "viduellement";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(45, 479);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(597, 16);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Si le joueur clique sur retirer  toutes ses mises seront retirées du plateau de j" +
+    "eu et réstituée à la somme. ";
+            // 
             // frm_regles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Jeu_de_la_roulette.Properties.Resources._4440459_green_wallpapers;
             this.ClientSize = new System.Drawing.Size(834, 534);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lbl8);
             this.Controls.Add(this.lbl7);
             this.Controls.Add(this.lbl6);
@@ -236,7 +240,6 @@
             this.Text = "Règles de jeu";
             this.Load += new System.EventHandler(this.frm_regles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -255,9 +258,9 @@
         private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.Label lbl7;
         private System.Windows.Forms.Label lbl8;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
