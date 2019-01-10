@@ -108,6 +108,7 @@
             // 
             // txt_mise
             // 
+            this.txt_mise.Enabled = false;
             this.txt_mise.Location = new System.Drawing.Point(212, 384);
             this.txt_mise.Name = "txt_mise";
             this.txt_mise.Size = new System.Drawing.Size(100, 20);
@@ -189,6 +190,7 @@
             // 
             // txt_numeromise
             // 
+            this.txt_numeromise.Enabled = false;
             this.txt_numeromise.Location = new System.Drawing.Point(341, 384);
             this.txt_numeromise.Name = "txt_numeromise";
             this.txt_numeromise.Size = new System.Drawing.Size(52, 20);

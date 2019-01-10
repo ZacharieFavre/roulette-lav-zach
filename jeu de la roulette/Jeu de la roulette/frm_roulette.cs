@@ -39,19 +39,26 @@ namespace Jeu_de_la_roulette
 
         private void cmd_Valider_Click(object sender, EventArgs e)
         {
-            int mise;
-            int numero;
-
-            mise = int.Parse(txt_mise.Text);
-            numero = int.Parse(txt_numeromise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_numeromise.Text != "")
             {
-                lstnumero[numero] += mise;
-                sommetotale -= mise;
+                int mise;
+                int numero;
+
+                mise = int.Parse(txt_mise.Text);
+                numero = int.Parse(txt_numeromise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    lstnumero[numero] += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
+            else
+            {
+                MessageBox.Show("Veuillez entrer un numéro sur lequel miser.");
+            }
         }
 
         private void cmd_retirer_Click(object sender, EventArgs e)
@@ -69,6 +76,8 @@ namespace Jeu_de_la_roulette
             cmd_Valider.Enabled = true;
             cmd_validersomme.Enabled = false;
             txt_sommetotal.Enabled = false;
+            txt_mise.Enabled = true;
+            txt_numeromise.Enabled = true;
         }
 
         private void cmd_Regles_Click(object sender, EventArgs e)
@@ -344,7 +353,6 @@ namespace Jeu_de_la_roulette
                     }
                     break;
             }
-            
             //LSJ Paire
             if (numerotirer % 2 == 0 && misePaire > 0)
             {
@@ -1206,231 +1214,271 @@ namespace Jeu_de_la_roulette
 
         private void cmd_paire_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                misePaire += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    misePaire += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_impair_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                miseImpaire += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    miseImpaire += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
+                
         }
 
         private void cmd_Noir_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                miseNoir += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    miseNoir += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_rouge_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                miseRouge += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    miseRouge += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_LigneHaut_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                miseLigneHaut += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    miseLigneHaut += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_LigneMil_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                miseLigneMil += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    miseLigneMil += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_LigneBas_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                miseLigneBas += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    miseLigneBas += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_voisinDu0_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                lstnumero[22] += mise;
-                lstnumero[19] += mise;
-                lstnumero[18] += mise;
-                lstnumero[7] += mise;
-                lstnumero[28] += mise;
-                lstnumero[12] += mise;
-                lstnumero[35] += mise;
-                lstnumero[3] += mise;
-                lstnumero[26] += mise;
-                lstnumero[0] += mise;
-                lstnumero[32] += mise;
-                lstnumero[15] += mise;
-                lstnumero[4] += mise;
-                lstnumero[21] += mise;
-                lstnumero[2] += mise;
-                lstnumero[25] += mise;
-                lstnumero[29] += mise;
-                sommetotale -= 17 * mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= 17*mise)
+                {
+                    lstnumero[22] += mise;
+                    lstnumero[19] += mise;
+                    lstnumero[18] += mise;
+                    lstnumero[7] += mise;
+                    lstnumero[28] += mise;
+                    lstnumero[12] += mise;
+                    lstnumero[35] += mise;
+                    lstnumero[3] += mise;
+                    lstnumero[26] += mise;
+                    lstnumero[0] += mise;
+                    lstnumero[32] += mise;
+                    lstnumero[15] += mise;
+                    lstnumero[4] += mise;
+                    lstnumero[21] += mise;
+                    lstnumero[2] += mise;
+                    lstnumero[25] += mise;
+                    lstnumero[29] += mise;
+                    sommetotale -= 17 * mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_Orph_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                lstnumero[9] += mise;
-                lstnumero[31] += mise;
-                lstnumero[14] += mise;
-                lstnumero[20] += mise;
-                lstnumero[1] += mise;
-                lstnumero[17] += mise;
-                lstnumero[34] += mise;
-                lstnumero[6] += mise;
-                sommetotale -= 8 * mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= 8*mise)
+                {
+                    lstnumero[9] += mise;
+                    lstnumero[31] += mise;
+                    lstnumero[14] += mise;
+                    lstnumero[20] += mise;
+                    lstnumero[1] += mise;
+                    lstnumero[17] += mise;
+                    lstnumero[34] += mise;
+                    lstnumero[6] += mise;
+                    sommetotale -= 8 * mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_Tiers_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                lstnumero[27] += mise;
-                lstnumero[13] += mise;
-                lstnumero[36] += mise;
-                lstnumero[11] += mise;
-                lstnumero[30] += mise;
-                lstnumero[8] += mise;
-                lstnumero[23] += mise;
-                lstnumero[10] += mise;
-                lstnumero[5] += mise;
-                lstnumero[24] += mise;
-                lstnumero[16] += mise;
-                lstnumero[33] += mise;
-                sommetotale -= 12 * mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= 12*mise)
+                {
+                    lstnumero[27] += mise;
+                    lstnumero[13] += mise;
+                    lstnumero[36] += mise;
+                    lstnumero[11] += mise;
+                    lstnumero[30] += mise;
+                    lstnumero[8] += mise;
+                    lstnumero[23] += mise;
+                    lstnumero[10] += mise;
+                    lstnumero[5] += mise;
+                    lstnumero[24] += mise;
+                    lstnumero[16] += mise;
+                    lstnumero[33] += mise;
+                    sommetotale -= 12 * mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_1to12_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                mise1to12 += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    mise1to12 += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_13to24_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                mise13to24 += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    mise13to24 += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
 
         private void cmd_25to36_Click(object sender, EventArgs e)
         {
-            int mise;
-
-            mise = int.Parse(txt_mise.Text);
-
-            if (sommetotale >= mise)
+            if (txt_mise.Text != "")
             {
-                mise25to36 += mise;
-                sommetotale -= mise;
+                int mise;
+
+                mise = int.Parse(txt_mise.Text);
+
+                if (sommetotale >= mise)
+                {
+                    mise25to36 += mise;
+                    sommetotale -= mise;
+                }
+                txt_sommetotal.Text = sommetotale.ToString();
+                ActualiserMise();
             }
-            txt_sommetotal.Text = sommetotale.ToString();
-            ActualiserMise();
         }
         private void gagne()
         {
