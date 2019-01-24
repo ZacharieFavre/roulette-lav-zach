@@ -14,7 +14,7 @@ namespace Jeu_de_la_roulette
     public partial class Accueil : Form
     {
         int numerotirer;
-        int sommetotale;
+        private static int sommetotale;
         int misePaire;
         int miseImpaire;
         int miseNoir;
@@ -27,14 +27,30 @@ namespace Jeu_de_la_roulette
         int mise25to36;
         int gain;
 
+        
         // Liste des mises sur les numéros
         List<int> lstnumero = new List<int>(new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 });
+
+        private static frmLogin.Login login;
 
         public Accueil()
         {
             InitializeComponent();
             
 
+        }
+
+        public static void createLogin(frmLogin.Login log)
+        {
+            login = log;
+            sommetotale = login.amount;
+            Program.Accueil.refreshST();
+        }
+
+        private void refreshST()
+        {
+            txt_sommetotal.Text = sommetotale.ToString();
+            txt_sommetotal.Enabled = false;
         }
 
         private void cmd_Valider_Click(object sender, EventArgs e)
@@ -1156,7 +1172,7 @@ namespace Jeu_de_la_roulette
                     break;
             }
             txt_sommetotal.Text = sommetotale.ToString();
-            
+            frmLogin.MajSomme(sommetotale,login.Username);
             pictureBox5.ImageLocation = @"C:\\roulette-lav-zach\\jeu de la roulette\\Jeu de la roulette\\fichiers\\numero roulette\\" + numerotirer + ".png";
 
             erease();            
@@ -1501,6 +1517,12 @@ namespace Jeu_de_la_roulette
             mise13to24 = 0;
             mise25to36 = 0;
             ActualiserMise();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmLogin lol = new frmLogin();
+            lol.Show();
         }
     }
 }

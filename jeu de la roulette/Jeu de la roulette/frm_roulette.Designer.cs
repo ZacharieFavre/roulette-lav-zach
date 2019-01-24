@@ -102,6 +102,7 @@
             this.lbl_1to12 = new System.Windows.Forms.Label();
             this.lbl_13to24 = new System.Windows.Forms.Label();
             this.lbl_25to36 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -794,6 +795,16 @@
             this.lbl_25to36.TabIndex = 82;
             this.lbl_25to36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(666, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 83;
+            this.button1.Text = "Login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -801,6 +812,7 @@
             this.BackgroundImage = global::Jeu_de_la_roulette.Properties.Resources.bg_frmaccueil;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1291, 817);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_25to36);
             this.Controls.Add(this.lbl_13to24);
             this.Controls.Add(this.lbl_1to12);
@@ -889,7 +901,7 @@
         private System.Windows.Forms.Label lbl_mise;
         private System.Windows.Forms.Button cmd_Valider;
         private System.Windows.Forms.Button cmd_Regles;
-        private System.Windows.Forms.TextBox txt_sommetotal;
+        public System.Windows.Forms.TextBox txt_sommetotal;
         private System.Windows.Forms.Label lbl_sommetotal;
         private System.Windows.Forms.Button cmd_validersomme;
         private System.Windows.Forms.Button cmd_tournerroulette;
@@ -958,6 +970,7 @@
         private System.Windows.Forms.Label lbl_1to12;
         private System.Windows.Forms.Label lbl_13to24;
         private System.Windows.Forms.Label lbl_25to36;
+        private System.Windows.Forms.Button button1;
     }
 }
 

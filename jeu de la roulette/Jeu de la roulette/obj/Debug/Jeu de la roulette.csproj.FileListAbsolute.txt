@@ -46,3 +46,17 @@ C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la r
 C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe.config
 C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\Jeu de la roulette.exe
 C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\Jeu de la roulette.pdb
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\aa\Jeu de la roulette.resources.dll
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.frmLogin.resources
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu_de_la_roulette.frmLogin.aa.resources
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\aa\Jeu de la roulette.resources.dll
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\EntityFramework.dll
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\EntityFramework.SqlServer.dll
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\System.Data.SQLite.dll
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\System.Data.SQLite.EF6.dll
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\System.Data.SQLite.Linq.dll
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\EntityFramework.xml
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\EntityFramework.SqlServer.xml
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\System.Data.SQLite.xml
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\bin\Debug\System.Data.SQLite.dll.config
+C:\roulette-lav-zach\jeu de la roulette\Jeu de la roulette\obj\Debug\Jeu de la roulette.csproj.CopyComplete

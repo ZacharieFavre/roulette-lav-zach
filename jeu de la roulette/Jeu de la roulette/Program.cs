@@ -8,6 +8,8 @@ namespace Jeu_de_la_roulette
 {
     static class Program
     {
+
+        public static Accueil Accueil;
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
@@ -16,7 +18,8 @@ namespace Jeu_de_la_roulette
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Accueil());
+            Accueil = new Accueil();
+            Application.Run(Accueil);
         }
     }
 }
